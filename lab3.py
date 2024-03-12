@@ -1,4 +1,5 @@
 from random import randint
+from time import sleep
 
 class Hero:
     def __init__(self, n, t, lvl = 1):
@@ -29,12 +30,14 @@ for i in range(randint(1, 5)):
         squad_undead.append(Soldier("Гуль " + f"{i + 1}", "Нежить"))
         
 print(f"Армия Альянса насчитывает {len(squad_alliance)} отважных паладинов\n")
-
+sleep(1)
 print(f"Армия Нежити насчитывает {len(squad_undead)} мерзких гулей\n")
+
+sleep(1)
 
 if len(squad_alliance) > len(squad_undead):
     heroAllience.levelUp()
 else:
     heroUndead.levelUp()
-
+sleep(1)
 squad_alliance[randint(0, len(squad_alliance) - 1)].follow(heroAllience)
